@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="lib/boot.css">
+
+    <title>Quiz App</title>
+
+</head>
+
+<body>
+    <nav class="navbar navbar-dark bg-dark justify-content-between">
+        <a class="navbar-brand text-light">Quiz App</a>
+        <form class="form-inline">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+    </nav>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3"></div>
+            <div class="col-md-6">
+
+                <div style="margin-top:10%" class="text-center" id="startQuiz">
+                    <button class="btn btn-info btn-lg" onclick="startQuiz()">Start Quiz</button>
+                </div>
+
+                <div id="questions" style="visibility:hidden; margin: 10% auto">
+
+
+                    <p>
+                        <span id="ques-num"></span>
+                        <span id="question"></span>
+                    </p>
+
+                    <div style="margin-top:5%" id="options">
+                        <div class="input-group">
+                            <label for="op1">
+                                <input type="radio" onClick='enableNextBtn()' id="op1" name="radio">
+                                <i id="opt1"></i>
+                            </label>
+                        </div>
+                        <div class="input-group">
+                            <label for="op2">
+                                <input type="radio" onClick='enableNextBtn()' id="op2" name="radio">
+                                <i id="opt2"></i>
+                            </label>
+                        </div>
+
+                        <div class="input-group">
+                            <label for="op3">
+                                <input type="radio" onClick='enableNextBtn()' id="op3" name="radio">
+                                <i id="opt3"></i>
+                            </label>
+                        </div>
+                        <div class="input-group">
+                            <label for="op4">
+                                <input type="radio" onClick='enableNextBtn()' id="op4" name="radio">
+                                <i id="opt4"></i>
+                            </label>
+                        </div>
+
+
+                        <div style="margin-top: 10%" id="next-btn-sec">
+                            <button class="btn btn-info float-right" id="next-button" onclick="nextBtn()">Next</button>
+                        </div>
+
+                    </div>
+
+                </div>
+                <section class="text-center" id="result" style="visibility:hidden">
+                    <h3 class="text-success center">Your score is
+                        <span id="showResult"></span>%
+                    </h3>
+                </section>
+            </div>
+            <div class="col-md-3"></div>
+        </div>
+
+
+
+
+    </div>
+
+    <script src="lib/jquery.js"></script>
+    <script src="lib/popper.js"></script>
+    <script src="lib/boot.js"></script>
+    <script src="app.js"></script>
+
+</body>
+
+</html>

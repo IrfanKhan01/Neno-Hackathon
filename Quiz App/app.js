@@ -13,33 +13,33 @@ let quesArray = [
     {
         id: 01,
         question: 'Inside which HTML element do we put the JavaScript?',
-        option1: '<js>',
-        option2: '<script>',
-        option3: '<javascript>',
-        option4: '<scripting>',
-        correctAns: '<script>'
+        option1: '&lt;js&gt;',
+        option2: '&lt;script&gt;',
+        option3: '&lt;javascript&gt;',
+        option4: '&lt;scripting&gt;',
+        correctAns: '&lt;script&gt;'
     },
     {
         id: 02,
         question: 'Where is the correct place to insert a JavaScript?',
-        option1: 'The <head> section',
-        option2: 'Both the <head> section and the <body> section are correct',
-        option3: 'The <body> section',
+        option1: 'The &lt;head&gt; section',
+        option2: 'Both the &lt;head&gt; section and the &lt;body&gt; section are correct',
+        option3: 'The &lt;body&gt; section',
         option4: 'None of these',
-        correctAns: 'The <body> section'
+        correctAns: 'The &lt;body&gt; section'
     },
     {
         id: 03,
         question: 'What is the correct syntax for referring to an external script called "xxx.js"?',
-        option1: '<script name="xxx.js">',
-        option2: '<script href="xxx.js">',
-        option3: '<script src="xxx.js">',
+        option1: '&lt;script name="xxx.js"&gt;',
+        option2: '&lt;script href="xxx.js"&gt;',
+        option3: '&lt;script src="xxx.js"&gt;',
         option4: 'None of these',
-        correctAns: '<script src="xxx.js">'
+        correctAns: '&lt;script src="xxx.js"&gt;'
     },
     {
         id: 04,
-        question: 'The external JavaScript file must contain the <script> tag.',
+        question: 'The external JavaScript file must contain the &lt;script&gt; tag.',
         option1: 'False',
         option2: 'True',
         option3: 'Depend on the file',
@@ -183,6 +183,12 @@ function nextBtn() {
         let answer = correct / quesArray.length * 100;
         result.innerHTML = answer;
 
+        if (answer >= 60) {
+            result.className = 'text-success';
+        }
+        else {
+            result.className = 'text-danger'
+        }
         // console.log(correct);
         console.log(quesArray.length)
     }
